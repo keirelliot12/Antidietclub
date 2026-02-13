@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.blade.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    /* Fonts */
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --font-heading: 'Fredoka One', cursive;
+    --font-accent: 'Pacifico', cursive;
+
+    /* Primary Colors - Pastel Pink */
+    --color-primary: #FFB6C1;
+    --color-primary-dark: #FF69B4;
+    --color-primary-light: #FFE4E9;
+
+    /* Secondary Colors - Pastel Purple */
+    --color-secondary: #DDA0DD;
+    --color-secondary-dark: #BA55D3;
+    --color-secondary-light: #F5E6F5;
+
+    /* Accent Colors - Pastel Yellow */
+    --color-accent: #FFFACD;
+    --color-accent-dark: #FFD700;
+    --color-accent-light: #FFFEF0;
+
+    /* Supporting Colors */
+    --color-info: #B0E0E6;
+    --color-info-dark: #87CEEB;
+    --color-info-light: #F0F8FF;
+
+    --color-success: #98FB98;
+    --color-success-dark: #3CB371;
+    --color-success-light: #F0FFF0;
+
+    --color-warning: #FFDAB9;
+    --color-warning-dark: #FFA500;
+    --color-warning-light: #FFF5EE;
+
+    /* WhatsApp Color */
+    --color-whatsapp: #25D366;
+
+    /* Neutral Colors */
+    --color-text-primary: #2D3748;
+    --color-text-secondary: #718096;
+    --color-text-muted: #A0AEC0;
+
+    --color-bg-primary: #FFFFFF;
+    --color-bg-secondary: #FAFAFA;
+    --color-bg-tertiary: #F7FAFC;
+
+    /* Border Radius - Soft & Rounded */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --radius-full: 9999px;
+
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+
+    /* Shadows - Soft & Dreamy */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+
+    /* Colored Shadows */
+    --shadow-pink: 0 10px 30px -5px rgba(255, 182, 193, 0.5);
+    --shadow-purple: 0 10px 30px -5px rgba(221, 160, 221, 0.5);
+    --shadow-yellow: 0 10px 30px -5px rgba(255, 250, 205, 0.5);
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog - Anti Diet Club Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" nomodule=""></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #FFF5F7 0%, #FFF0F5 100%);
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(255, 182, 193, 0.3);
+        }
+        
+        .category-badge {
+            background: linear-gradient(135deg, #FFB6C1, #FFC0CB);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #FF1493, #FF69B4);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                    Anti Diet Club
+                </span>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-pink-500">Home</a>
+                    <a href="#" class="text-pink-500 font-medium">Products</a>
+                    <a href="#" class="text-gray-600 hover:text-pink-500">About</a>
+                </nav>
+                <button class="relative p-2 text-gray-600 hover:text-pink-500">
+                    <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
+                    <span class="absolute -top-1 -right-1 bg-pink-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">3</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+                Our Products
+            </h1>
+            <p class="text-center text-gray-600 mt-2">Delicious treats for every craving</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pb-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Filter Sidebar -->
+            <aside class="lg:w-72 flex-shrink-0">
+                <div class="bg-white/90 backdrop-blur rounded-2xl shadow-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                        <ion-icon name="options-outline" class="mr-2"></ion-icon>
+                        Filters
+                    </h3>
+                    
+                    <!-- Categories -->
+                    <div class="mb-6">
+                        <h4 class="font-medium text-gray-700 mb-3">Categories</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 rounded accent-pink-500" checked>
+                                <span class="ml-2 text-gray-600">Cookies</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 rounded accent-pink-500">
+                                <span class="ml-2 text-gray-600">Brownies</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 rounded accent-pink-500">
+                                <span class="ml-2 text-gray-600">Cakes</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 rounded accent-pink-500">
+                                <span class="ml-2 text-gray-600">Gift Sets</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Range -->
+                    <div class="mb-6">
+                        <h4 class="font-medium text-gray-700 mb-3">Price Range</h4>
+                        <div class="space-y-3">
+                            <div>
+                                <label class="text-sm text-gray-500">Rp 25.000 - Rp 150.000</label>
+                                <input type="range" class="w-full h-2 rounded-lg appearance-none cursor-pointer" style="background: linear-gradient(to right, #FFB6C1, #DDA0DD);">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sort -->
+                    <div class="mb-6">
+                        <h4 class="font-medium text-gray-700 mb-3">Sort By</h4>
+                        <select class="w-full px-4 py-2 rounded-lg border border-pink-200 focus:border-pink-400 outline-none">
+                            <option>Price (Low-High)</option>
+                            <option>Price (High-Low)</option>
+                            <option>Name (A-Z)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Apply Filters -->
+                    <button class="w-full btn-primary text-white py-3 rounded-xl font-medium">
+                        Apply Filters
+                    </button>
+                </div>
+            </aside>
+            
+            <!-- Products Grid -->
+            <div class="flex-1">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Product Card 1 -->
+                    <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div class="aspect-square bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
+                            <ion-icon name="image-outline" class="text-6xl text-pink-300"></ion-icon>
+                        </div>
+                        <div class="p-4">
+                            <span class="category-badge text-white text-xs px-3 py-1 rounded-full">Cookies</span>
+                            <h3 class="font-semibold text-gray-800 mt-2 text-lg">Choco Chip Cookies</h3>
+                            <div class="flex items-center text-yellow-500 text-xs mt-1">
+                                <ion-icon name="star" class="mr-1"></ion-icon>
+                                Featured
+                            </div>
+                            <p class="text-pink-500 font-bold text-xl mt-2">Rp 45.000</p>
+                            <p class="text-gray-400 text-sm">200g</p>
+                            <button class="w-full btn-primary text-white py-2 rounded-xl mt-3 flex items-center justify-center space-x-2">
+                                <ion-icon name="cart-outline"></ion-icon>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 2 -->
+                    <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div class="aspect-square bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
+                            <ion-icon name="image-outline" class="text-6xl text-pink-300"></ion-icon>
+                        </div>
+                        <div class="p-4">
+                            <span class="category-badge text-white text-xs px-3 py-1 rounded-full">Brownies</span>
+                            <h3 class="font-semibold text-gray-800 mt-2 text-lg">Double Fudge Brownies</h3>
+                            <div class="flex items-center text-yellow-500 text-xs mt-1">
+                                <ion-icon name="star" class="mr-1"></ion-icon>
+                                Featured
+                            </div>
+                            <p class="text-pink-500 font-bold text-xl mt-2">Rp 55.000</p>
+                            <p class="text-gray-400 text-sm">200g</p>
+                            <button class="w-full btn-primary text-white py-2 rounded-xl mt-3 flex items-center justify-center space-x-2">
+                                <ion-icon name="cart-outline"></ion-icon>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 3 -->
+                    <div class="product-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div class="aspect-square bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
+                            <ion-icon name="image-outline" class="text-6xl text-pink-300"></ion-icon>
+                        </div>
+                        <div class="p-4">
+                            <span class="category-badge text-white text-xs px-3 py-1 rounded-full">Cakes</span>
+                            <h3 class="font-semibold text-gray-800 mt-2 text-lg">Classic Chocolate Cake</h3>
+                            <div class="flex items-center text-yellow-500 text-xs mt-1">
+                                <ion-icon name="star" class="mr-1"></ion-icon>
+                                Featured
+                            </div>
+                            <p class="text-pink-500 font-bold text-xl mt-2">Rp 85.000</p>
+                            <p class="text-gray-400 text-sm">500g</p>
+                            <button class="w-full btn-primary text-white py-2 rounded-xl mt-3 flex items-center justify-center space-x-2">
+                                <ion-icon name="cart-outline"></ion-icon>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white/80 backdrop-blur-md py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <span class="text-xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                    Anti Diet Club
+                </span>
+                <p class="text-gray-500 mt-2">Delicious treats for every occasion</p>
+                <p class="text-gray-400 text-sm mt-4">© 2024 Anti Diet Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
