@@ -2,10 +2,13 @@
 builder = 'nixpacks'
 
 [phases.setup]
-nixPkgs = ['...', 'php83', 'nginx']
+# Hilangkan '...' supaya PHP 8.2 bawaan Nixpacks TIDAK ikut terpasang!
+# Tambahkan 'php83Packages.composer' agar composer tidak protes
+nixPkgs = ['php83', 'php83Packages.composer', 'nodejs_22', 'nginx']
 
 [phases.build]
 cmds = ['composer install --no-dev --optimize-autoloader', 'npm install', 'npm run build']
 
 [start]
-cmd = 'php artisan serve --host=0.0.0.0 --port=80'
+# Ubah host 0.0.0.0 menjadi 127.0.0.1 agar tidak tembus ke public
+cmd = 'php artisan serve --host=127.0.0.1 --port=80'
