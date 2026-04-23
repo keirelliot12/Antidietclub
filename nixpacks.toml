@@ -1,0 +1,5 @@
+[build]
+builder = 'nixpacks'
+
+[phases.build]
+cmds = ['composer install --no-dev --optimize-autoloader', 'npm install', 'npm run build']
