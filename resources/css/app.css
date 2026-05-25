@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap');
+
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -6,59 +8,69 @@
 @source '../**/*.js';
 
 @theme {
-    /* Fonts */
+    /* ── Fonts ─────────────────────────────────────────── */
     --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
-    --font-heading: 'Fredoka One', cursive;
+    --font-heading: 'Playfair Display', serif;
     --font-accent: 'Pacifico', cursive;
 
-    /* Primary Colors - Pastel Pink */
-    --color-primary: #FFB6C1;
-    --color-primary-dark: #FF69B4;
-    --color-primary-light: #FFE4E9;
+    /* ── Primary Colors – Warm Brown ──────────────────── */
+    --color-primary: #A67C52;
+    --color-primary-dark: #8B5E3C;
+    --color-primary-light: #C4A882;
 
-    /* Secondary Colors - Pastel Purple */
-    --color-secondary: #DDA0DD;
-    --color-secondary-dark: #BA55D3;
-    --color-secondary-light: #F5E6F5;
+    /* ── Secondary Colors – Earthy Olive ──────────────── */
+    --color-secondary: #3A4F41;
+    --color-secondary-dark: #2C3D33;
+    --color-secondary-light: #D4DFD7;
 
-    /* Accent Colors - Pastel Yellow */
-    --color-accent: #FFFACD;
-    --color-accent-dark: #FFD700;
-    --color-accent-light: #FFFEF0;
+    /* ── Accent Colors – Golden ───────────────────────── */
+    --color-accent: #D4AF37;
+    --color-accent-dark: #B8960F;
+    --color-accent-light: #F5E6B8;
 
-    /* Supporting Colors */
-    --color-info: #B0E0E6;
-    --color-info-dark: #87CEEB;
-    --color-info-light: #F0F8FF;
+    /* ── Supporting Colors ────────────────────────────── */
+    --color-info: #F5F0E1;
+    --color-info-dark: #E0D6C0;
+    --color-info-light: #FAF6ED;
 
-    --color-success: #98FB98;
-    --color-success-dark: #3CB371;
-    --color-success-light: #F0FFF0;
+    --color-success: #3A4F41;
+    --color-success-dark: #2C3D33;
+    --color-success-light: #D4DFD7;
 
-    --color-warning: #FFDAB9;
-    --color-warning-dark: #FFA500;
-    --color-warning-light: #FFF5EE;
+    --color-warning: #D2691E;
+    --color-warning-dark: #A84F15;
+    --color-warning-light: #FDE8D5;
 
-    /* WhatsApp Color */
+    /* ── WhatsApp Color ───────────────────────────────── */
     --color-whatsapp: #25D366;
 
-    /* Neutral Colors */
-    --color-text-primary: #2D3748;
-    --color-text-secondary: #718096;
-    --color-text-muted: #A0AEC0;
+    /* ── Special Brand Colors ─────────────────────────── */
+    --color-cream: #F5F0E1;
+    --color-olive: #3A4F41;
+    --color-brown: #A67C52;
+    --color-terra: #C27A5F;
+    --color-gold: #D4AF37;
+    --color-orange: #D2691E;
+    --color-offwhite: #FAF6ED;
 
-    --color-bg-primary: #FFFFFF;
-    --color-bg-secondary: #FAFAFA;
-    --color-bg-tertiary: #F7FAFC;
+    /* ── Text Colors ──────────────────────────────────── */
+    --color-text-primary: #3A4F41;
+    --color-text-secondary: #A67C52;
+    --color-text-muted: #8B7355;
 
-    /* Border Radius - Soft & Rounded */
+    /* ── Background Colors ────────────────────────────── */
+    --color-bg-primary: #FAF6ED;
+    --color-bg-secondary: #F5F0E1;
+    --color-bg-tertiary: #EDE4D3;
+
+    /* ── Border Radius – Soft & Rounded ───────────────── */
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
     --radius-xl: 32px;
     --radius-full: 9999px;
 
-    /* Spacing */
+    /* ── Spacing ──────────────────────────────────────── */
     --space-1: 0.25rem;
     --space-2: 0.5rem;
     --space-3: 0.75rem;
@@ -72,15 +84,15 @@
     --space-20: 5rem;
     --space-24: 6rem;
 
-    /* Shadows - Soft & Dreamy */
+    /* ── Standard Shadows ─────────────────────────────── */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 
-    /* Colored Shadows */
-    --shadow-pink: 0 10px 30px -5px rgba(255, 182, 193, 0.5);
-    --shadow-purple: 0 10px 30px -5px rgba(221, 160, 221, 0.5);
-    --shadow-yellow: 0 10px 30px -5px rgba(255, 250, 205, 0.5);
+    /* ── Brand-Colored Shadows – Earthy Warm ──────────── */
+    --shadow-warm: 0 10px 30px rgba(166, 124, 82, 0.3);
+    --shadow-olive: 0 10px 30px rgba(58, 79, 65, 0.3);
+    --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.3);
 }

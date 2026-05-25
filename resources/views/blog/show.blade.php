@@ -7,33 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        pacifico: ['Pacifico', 'cursive'],
-                        poppins: ['Poppins', 'sans-serif'],
-                    },
-                    colors: {
-                        pastel: {
-                            pink: '#FFD1DC',
-                            blue: '#AEC6CF',
-                            green: '#77DD77',
-                            yellow: '#FDFD96',
-                            purple: '#B39EB5',
-                            lavender: '#E6E6FA',
-                            peach: '#FFDAB9',
-                            mint: '#98FF98',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-gradient-to-br from-pastel-lavender via-white to-pastel-pink min-h-screen font-poppins">
+<body class="bg-gradient-to-br from-olive/10 via-white to-terra/10 min-h-screen font-poppins">
 
     <!-- Navigation -->
     @include('components.navbar')
@@ -42,11 +18,11 @@
     <div class="bg-white/50 py-4 pt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex text-sm text-gray-600">
-                <a href="{{ route('home') }}" class="hover:text-pastel-purple transition-colors">Home</a>
+                <a href="{{ route('home') }}" class="hover:text-olive transition-colors">Home</a>
                 <span class="mx-2">/</span>
-                <a href="{{ route('blog.index') }}" class="hover:text-pastel-purple transition-colors">Blog</a>
+                <a href="{{ route('blog.index') }}" class="hover:text-olive transition-colors">Blog</a>
                 <span class="mx-2">/</span>
-                <span class="text-pastel-purple">{{ $post->title }}</span>
+                <span class="text-olive">{{ $post->title }}</span>
             </nav>
         </div>
     </div>
@@ -63,7 +39,7 @@
                              alt="{{ $post->title }}"
                              class="w-full h-64 md:h-96 object-cover">
                     @else
-                        <div class="w-full h-64 md:h-96 bg-gradient-to-br from-pastel-pink to-pastel-purple flex items-center justify-center">
+                        <div class="w-full h-64 md:h-96 bg-gradient-to-br from-terra to-olive flex items-center justify-center">
                             <span class="text-6xl">🌸</span>
                         </div>
                     @endif
@@ -73,9 +49,9 @@
                         @if($post->category)
                             @php
                                 $categoryColors = [
-                                    'tips-tricks' => 'bg-pastel-green text-green-800',
-                                    'recipes' => 'bg-pastel-peach text-orange-800',
-                                    'default' => 'bg-pastel-blue text-blue-800'
+                                    'tips-tricks' => 'bg-olive/20 text-olive',
+                                    'recipes' => 'bg-terra/20 text-terra',
+                                    'default' => 'bg-brown/20 text-brown'
                                 ];
                                 $badgeClass = $categoryColors[$post->category->slug] ?? $categoryColors['default'];
                             @endphp
@@ -90,7 +66,7 @@
                         </h1>
 
                         <!-- Meta Info -->
-                        <div class="flex flex-wrap items-center gap-4 mb-8 pb-8 border-b-2 border-pastel-lavender">
+                        <div class="flex flex-wrap items-center gap-4 mb-8 pb-8 border-b-2 border-olive/30">
                             <div class="flex items-center gap-2 text-gray-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -111,7 +87,7 @@
                         </div>
 
                         <!-- Share Buttons -->
-                        <div class="mt-10 pt-8 border-t-2 border-pastel-lavender">
+                        <div class="mt-10 pt-8 border-t-2 border-olive/30">
                             <h3 class="font-semibold text-gray-800 mb-4">Bagikan Artikel Ini</h3>
                             <div class="flex gap-4">
                                 <a href="https://wa.me/?text={{ urlencode($post->title . ' - ' . route('blog.show', $post->slug)) }}"
@@ -146,7 +122,7 @@
                 <!-- Back to Blog -->
                 <div class="mt-8">
                     <a href="{{ route('blog.index') }}"
-                       class="inline-flex items-center gap-2 px-6 py-3 bg-white text-pastel-purple font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-pastel-purple hover:text-white transition-all">
+                       class="inline-flex items-center gap-2 px-6 py-3 bg-white text-olive font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-olive hover:text-white transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
@@ -171,19 +147,19 @@
                                                  alt="{{ $recent->title }}"
                                                  class="w-20 h-20 object-cover rounded-lg flex-shrink-0">
                                         @else
-                                            <div class="w-20 h-20 bg-gradient-to-br from-pastel-pink to-pastel-purple rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <div class="w-20 h-20 bg-gradient-to-br from-terra to-olive rounded-lg flex items-center justify-center flex-shrink-0">
                                                 <span class="text-2xl">🌸</span>
                                             </div>
                                         @endif
                                         <div class="flex-1">
                                             <!-- Category -->
                                             @if($recent->category)
-                                                <span class="text-xs text-pastel-purple font-medium">
+                                                <span class="text-xs text-olive font-medium">
                                                     {{ $recent->category->name }}
                                                 </span>
                                             @endif
                                             <!-- Title -->
-                                            <h4 class="text-sm font-semibold text-gray-800 group-hover:text-pastel-purple transition-colors line-clamp-2">
+                                            <h4 class="text-sm font-semibold text-gray-800 group-hover:text-olive transition-colors line-clamp-2">
                                                 {{ $recent->title }}
                                             </h4>
                                             <!-- Date -->
@@ -207,7 +183,7 @@
                         @foreach($categories as $category)
                             <li>
                                 <a href="{{ route('blog.index', ['category' => $category->slug]) }}"
-                                   class="block px-4 py-2 rounded-xl bg-gray-100 text-gray-700 hover:bg-pastel-lavender hover:text-pastel-purple transition-colors">
+                                   class="block px-4 py-2 rounded-xl bg-gray-100 text-gray-700 hover:bg-olive/20 hover:text-olive transition-colors">
                                     {{ $category->name }}
                                 </a>
                             </li>
