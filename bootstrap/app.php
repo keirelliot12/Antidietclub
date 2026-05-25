@@ -11,20 +11,8 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        // TEMPORARY: Disable CSRF completely for testing
-        // $middleware->validateCsrfTokens(except: [
-        //     '/admin/*',      // Filament admin panel
-        //     '/livewire/*',   // ALL Livewire requests
-        //     '/test-cart',
-        //     '/test-session',
-        //     '/test-cart-data',
-        //     '/test-clear-cart',
-        //     '/cart/add',
-        //     '/cart/update',
-        //     '/cart/remove',
-        //     '/cart/whatsapp',
-        //     '/products/*/add-to-cart',
-        // ]);
+        // CSRF handled via VerifyCsrfToken::except — see app/Http/Middleware/VerifyCsrfToken.php
+        $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
