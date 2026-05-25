@@ -1,29 +1,29 @@
 <nav id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 transform translate-y-0">
-    <div class="bg-white/80 backdrop-blur-md shadow-softer">
+    <div class="bg-cream-milk/90 backdrop-blur-md shadow-soft">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <a href="{{ url('/') }}" class="font-heading text-2xl text-olive">
-                    <span class="text-terra">Luwe</span> & Cha-Ology
+                <a href="{{ url('/') }}" class="font-heading text-2xl text-tea-green">
+                    Luwe & Cha-Ology
                 </a>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="{{ url('/') }}" class="text-gray-700 hover:text-terra transition-colors font-medium">Home</a>
-                    <a href="{{ route('products.index') }}" class="text-gray-700 hover:text-terra transition-colors font-medium">Products</a>
-                    <a href="{{ route('blog.index') }}" class="text-gray-700 hover:text-terra transition-colors font-medium">Blog</a>
-                    <a href="{{ route('cart.index') }}" class="text-gray-700 hover:text-terra transition-colors font-medium">Cart</a>
+                    <a href="{{ url('/') }}" class="text-tea-green/80 hover:text-soft-terra transition-colors font-medium">Home</a>
+                    <a href="{{ route('products.index') }}" class="text-tea-green/80 hover:text-soft-terra transition-colors font-medium">Products</a>
+                    <a href="{{ route('blog.index') }}" class="text-tea-green/80 hover:text-soft-terra transition-colors font-medium">Blog</a>
+                    <a href="{{ route('cart.index') }}" class="text-tea-green/80 hover:text-soft-terra transition-colors font-medium">Cart</a>
                 </div>
 
                 <!-- Cart Button -->
-                <a href="{{ route('cart.index') }}" class="bg-terra text-white px-6 py-2 rounded-full font-medium hover:bg-olive transition-colors shadow-soft flex items-center gap-2">
+                <a href="{{ route('cart.index') }}" class="bg-soft-terra text-warm-white px-6 py-2 rounded-full font-medium hover:bg-tea-brown transition-colors shadow-soft flex items-center gap-2">
                     <span>🛒</span>
                     @php
                         $cartService = new \App\Services\CartService();
                         $cartCount = $cartService->getCount();
                     @endphp
                     @if($cartCount > 0)
-                        <span class="bg-white text-terra rounded-full w-5 h-5 flex items-center justify-center text-xs font-semibold">{{ $cartCount }}</span>
+                        <span class="bg-warm-white text-soft-terra rounded-full w-5 h-5 flex items-center justify-center text-xs font-semibold">{{ $cartCount }}</span>
                     @endif
                 </a>
             </div>

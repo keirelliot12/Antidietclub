@@ -9,20 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-gradient-to-br from-olive/10 via-white to-terra/10 min-h-screen font-poppins">
+<body class="bg-gradient-to-br from-tea-green/10 via-warm-white to-soft-terra/10 min-h-screen font-poppins">
 
     <!-- Navigation -->
     @include('components.navbar')
 
     <!-- Breadcrumb -->
-    <div class="bg-white/50 py-4 pt-20">
+    <div class="bg-warm-white/50 py-4 pt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="flex text-sm text-gray-600">
-                <a href="{{ route('home') }}" class="hover:text-olive transition-colors">Home</a>
+            <nav class="flex text-sm text-soft-terra">
+                <a href="{{ route('home') }}" class="hover:text-soft-terra transition-colors">Home</a>
                 <span class="mx-2">/</span>
-                <a href="{{ route('blog.index') }}" class="hover:text-olive transition-colors">Blog</a>
+                <a href="{{ route('blog.index') }}" class="hover:text-soft-terra transition-colors">Blog</a>
                 <span class="mx-2">/</span>
-                <span class="text-olive">{{ $post->title }}</span>
+                <span class="text-tea-green">{{ $post->title }}</span>
             </nav>
         </div>
     </div>
@@ -32,14 +32,14 @@
         <div class="flex flex-col lg:flex-row gap-8">
             <!-- Blog Post Content -->
             <div class="lg:w-3/4">
-                <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <article class="bg-warm-white rounded-soft shadow-card overflow-hidden">
                     <!-- Featured Image -->
                     @if($post->featured_image)
                         <img src="{{ $post->featured_image }}"
                              alt="{{ $post->title }}"
                              class="w-full h-64 md:h-96 object-cover">
                     @else
-                        <div class="w-full h-64 md:h-96 bg-gradient-to-br from-terra to-olive flex items-center justify-center">
+                        <div class="w-full h-64 md:h-96 bg-gradient-to-br from-soft-terra to-tea-green flex items-center justify-center">
                             <span class="text-6xl">🌸</span>
                         </div>
                     @endif
@@ -49,9 +49,9 @@
                         @if($post->category)
                             @php
                                 $categoryColors = [
-                                    'tips-tricks' => 'bg-olive/20 text-olive',
-                                    'recipes' => 'bg-terra/20 text-terra',
-                                    'default' => 'bg-brown/20 text-brown'
+                                    'tips-tricks' => 'bg-matcha-olive/20 text-tea-green',
+                                    'recipes' => 'bg-soft-terra/20 text-soft-terra',
+                                    'default' => 'bg-tea-brown/20 text-tea-brown'
                                 ];
                                 $badgeClass = $categoryColors[$post->category->slug] ?? $categoryColors['default'];
                             @endphp
@@ -61,19 +61,19 @@
                         @endif
 
                         <!-- Title -->
-                        <h1 class="text-3xl md:text-4xl font-pacifico text-gray-800 mb-6 leading-tight">
+                        <h1 class="text-3xl md:text-4xl font-pacifico text-tea-green mb-6 leading-tight">
                             {{ $post->title }}
                         </h1>
 
                         <!-- Meta Info -->
-                        <div class="flex flex-wrap items-center gap-4 mb-8 pb-8 border-b-2 border-olive/30">
-                            <div class="flex items-center gap-2 text-gray-600">
+                        <div class="flex flex-wrap items-center gap-4 mb-8 pb-8 border-b-2 border-tea-brown/30">
+                            <div class="flex items-center gap-2 text-soft-terra">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
                                 <span>Luwe & Cha-Ology Team</span>
                             </div>
-                            <div class="flex items-center gap-2 text-gray-600">
+                            <div class="flex items-center gap-2 text-soft-terra">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
@@ -82,13 +82,13 @@
                         </div>
 
                         <!-- Content -->
-                        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                        <div class="prose prose-lg max-w-none text-soft-terra leading-relaxed">
                             {!! $post->content !!}
                         </div>
 
                         <!-- Share Buttons -->
-                        <div class="mt-10 pt-8 border-t-2 border-olive/30">
-                            <h3 class="font-semibold text-gray-800 mb-4">Bagikan Artikel Ini</h3>
+                        <div class="mt-10 pt-8 border-t-2 border-tea-brown/30">
+                            <h3 class="font-semibold text-tea-green mb-4">Bagikan Artikel Ini</h3>
                             <div class="flex gap-4">
                                 <a href="https://wa.me/?text={{ urlencode($post->title . ' - ' . route('blog.show', $post->slug)) }}"
                                    target="_blank"
@@ -122,7 +122,7 @@
                 <!-- Back to Blog -->
                 <div class="mt-8">
                     <a href="{{ route('blog.index') }}"
-                       class="inline-flex items-center gap-2 px-6 py-3 bg-white text-olive font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-olive hover:text-white transition-all">
+                       class="inline-flex items-center gap-2 px-6 py-3 bg-warm-white text-tea-green font-semibold rounded-xl shadow-lg hover:shadow-xl hover:bg-tea-green hover:text-warm-white transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
@@ -134,8 +134,8 @@
             <!-- Sidebar -->
             <div class="lg:w-1/4 space-y-8">
                 <!-- Recent Posts -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
-                    <h3 class="font-pacifico text-xl text-gray-800 mb-4">Artikel Terbaru</h3>
+                <div class="bg-warm-white rounded-soft shadow-card p-6">
+                    <h3 class="font-pacifico text-xl text-tea-green mb-4">Artikel Terbaru</h3>
                     @if($recentPosts->count() > 0)
                         <div class="space-y-4">
                             @foreach($recentPosts as $recent)
@@ -147,23 +147,23 @@
                                                  alt="{{ $recent->title }}"
                                                  class="w-20 h-20 object-cover rounded-lg flex-shrink-0">
                                         @else
-                                            <div class="w-20 h-20 bg-gradient-to-br from-terra to-olive rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <div class="w-20 h-20 bg-gradient-to-br from-soft-terra to-tea-green rounded-lg flex items-center justify-center flex-shrink-0">
                                                 <span class="text-2xl">🌸</span>
                                             </div>
                                         @endif
                                         <div class="flex-1">
                                             <!-- Category -->
                                             @if($recent->category)
-                                                <span class="text-xs text-olive font-medium">
+                                                <span class="text-xs text-tea-green font-medium">
                                                     {{ $recent->category->name }}
                                                 </span>
                                             @endif
                                             <!-- Title -->
-                                            <h4 class="text-sm font-semibold text-gray-800 group-hover:text-olive transition-colors line-clamp-2">
+                                            <h4 class="text-sm font-semibold text-tea-green group-hover:text-soft-terra transition-colors line-clamp-2">
                                                 {{ $recent->title }}
                                             </h4>
                                             <!-- Date -->
-                                            <span class="text-xs text-gray-400">
+                                            <span class="text-xs text-tea-brown/60">
                                                 {{ $recent->published_at ? $recent->published_at->format('d M Y') : '' }}
                                             </span>
                                         </div>
@@ -172,18 +172,18 @@
                             @endforeach
                         </div>
                     @else
-                        <p class="text-gray-500 text-sm">Belum ada artikel lain.</p>
+                        <p class="text-tea-brown/60 text-sm">Belum ada artikel lain.</p>
                     @endif
                 </div>
 
                 <!-- Categories -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
-                    <h3 class="font-pacifico text-xl text-gray-800 mb-4">Kategori</h3>
+                <div class="bg-warm-white rounded-soft shadow-card p-6">
+                    <h3 class="font-pacifico text-xl text-tea-green mb-4">Kategori</h3>
                     <ul class="space-y-2">
                         @foreach($categories as $category)
                             <li>
                                 <a href="{{ route('blog.index', ['category' => $category->slug]) }}"
-                                   class="block px-4 py-2 rounded-xl bg-gray-100 text-gray-700 hover:bg-olive/20 hover:text-olive transition-colors">
+                                   class="block px-4 py-2 rounded-xl bg-cream-milk-milk text-soft-terra hover:bg-matcha-olive/20 hover:text-tea-green transition-colors">
                                     {{ $category->name }}
                                 </a>
                             </li>
@@ -195,9 +195,9 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-white/80 backdrop-blur-sm mt-12 py-8">
+    <footer class="bg-warm-white/80 backdrop-blur-sm mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-600 font-pacifico text-lg">© {{ date('Y') }} Luwe & Cha-Ology. Semua hak dilindungi.</p>
+            <p class="text-soft-terra font-pacifico text-lg">© {{ date('Y') }} Luwe & Cha-Ology. Semua hak dilindungi.</p>
         </div>
     </footer>
 </body>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Satisfy&display=swap');
 
 @import 'tailwindcss';
 
@@ -8,91 +8,35 @@
 @source '../**/*.js';
 
 @theme {
-    /* ── Fonts ─────────────────────────────────────────── */
-    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
-    --font-heading: 'Playfair Display', serif;
-    --font-accent: 'Pacifico', cursive;
+    /* ── Font Families ────────────────────────────────── */
+    --font-body: 'DM Sans', sans-serif;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-script: 'Satisfy', cursive;
 
-    /* ── Primary Colors – Warm Brown ──────────────────── */
-    --color-primary: #A67C52;
-    --color-primary-dark: #8B5E3C;
-    --color-primary-light: #C4A882;
+    /* ── Botanical Tea Dessert Palette ───────────────── */
+    --color-cream-milk: #F7F1E4;
+    --color-warm-white: #FFFCF5;
+    --color-tea-green: #2F4637;
+    --color-matcha-olive: #6F7D57;
+    --color-tea-brown: #9A7652;
+    --color-soft-terra: #B97861;
+    --color-honey-gold: #C7A35A;
+    --color-thai-tea: #C98245;
+    --color-deep-brown: #5A3D2B;
 
-    /* ── Secondary Colors – Earthy Olive ──────────────── */
-    --color-secondary: #3A4F41;
-    --color-secondary-dark: #2C3D33;
-    --color-secondary-light: #D4DFD7;
+    /* ── Semantic Color Mappings ─────────────────────── */
+    --color-primary: var(--tea-green);
+    --color-secondary: var(--matcha-olive);
+    --color-accent: var(--soft-terra);
+    --color-info: var(--cream-milk);
+    --color-success: var(--matcha-olive);
+    --color-warning: var(--thai-tea);
 
-    /* ── Accent Colors – Golden ───────────────────────── */
-    --color-accent: #D4AF37;
-    --color-accent-dark: #B8960F;
-    --color-accent-light: #F5E6B8;
+    /* ── Shadows ─────────────────────────────────────── */
+    --shadow-soft: 0 12px 35px rgba(47, 70, 55, 0.10);
+    --shadow-card: 0 10px 28px rgba(90, 61, 43, 0.08);
 
-    /* ── Supporting Colors ────────────────────────────── */
-    --color-info: #F5F0E1;
-    --color-info-dark: #E0D6C0;
-    --color-info-light: #FAF6ED;
-
-    --color-success: #3A4F41;
-    --color-success-dark: #2C3D33;
-    --color-success-light: #D4DFD7;
-
-    --color-warning: #D2691E;
-    --color-warning-dark: #A84F15;
-    --color-warning-light: #FDE8D5;
-
-    /* ── WhatsApp Color ───────────────────────────────── */
-    --color-whatsapp: #25D366;
-
-    /* ── Special Brand Colors ─────────────────────────── */
-    --color-cream: #F5F0E1;
-    --color-olive: #3A4F41;
-    --color-brown: #A67C52;
-    --color-terra: #C27A5F;
-    --color-gold: #D4AF37;
-    --color-orange: #D2691E;
-    --color-offwhite: #FAF6ED;
-
-    /* ── Text Colors ──────────────────────────────────── */
-    --color-text-primary: #3A4F41;
-    --color-text-secondary: #A67C52;
-    --color-text-muted: #8B7355;
-
-    /* ── Background Colors ────────────────────────────── */
-    --color-bg-primary: #FAF6ED;
-    --color-bg-secondary: #F5F0E1;
-    --color-bg-tertiary: #EDE4D3;
-
-    /* ── Border Radius – Soft & Rounded ───────────────── */
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    --radius-xl: 32px;
-    --radius-full: 9999px;
-
-    /* ── Spacing ──────────────────────────────────────── */
-    --space-1: 0.25rem;
-    --space-2: 0.5rem;
-    --space-3: 0.75rem;
-    --space-4: 1rem;
-    --space-5: 1.25rem;
-    --space-6: 1.5rem;
-    --space-8: 2rem;
-    --space-10: 2.5rem;
-    --space-12: 3rem;
-    --space-16: 4rem;
-    --space-20: 5rem;
-    --space-24: 6rem;
-
-    /* ── Standard Shadows ─────────────────────────────── */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-
-    /* ── Brand-Colored Shadows – Earthy Warm ──────────── */
-    --shadow-warm: 0 10px 30px rgba(166, 124, 82, 0.3);
-    --shadow-olive: 0 10px 30px rgba(58, 79, 65, 0.3);
-    --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.3);
+    /* ── Border Radius ───────────────────────────────── */
+    --radius-soft: 28px;
+    --radius-pill: 999px;
 }

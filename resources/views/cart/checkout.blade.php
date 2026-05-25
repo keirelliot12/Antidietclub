@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-body bg-cream min-h-screen">
+<body class="font-body bg-cream-milk-milk min-h-screen">
 
     <!-- Navigation -->
     @include('components.navbar')
@@ -17,10 +17,10 @@
     <!-- Checkout Page -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-20">
         <div class="text-center mb-12">
-            <h1 class="font-heading text-4xl md:text-5xl text-olive mb-4">
+            <h1 class="font-heading text-4xl md:text-5xl text-tea-green mb-4">
                 📦 Checkout
             </h1>
-            <p class="font-accent text-xl text-terra">Almost there! Complete your order</p>
+            <p class="font-accent text-xl text-soft-terra">Almost there! Complete your order</p>
         </div>
 
         @if(session('error'))
@@ -32,8 +32,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- Checkout Form -->
             <div class="lg:col-span-2">
-                <div class="bg-white rounded-3xl shadow-soft p-6 md:p-8">
-                    <h2 class="font-heading text-2xl text-olive mb-6">📍 Delivery Details</h2>
+                <div class="bg-warm-white rounded-soft shadow-card p-6 md:p-8">
+                    <h2 class="font-heading text-2xl text-tea-green mb-6">📍 Delivery Details</h2>
 
                     <form action="{{ route('cart.whatsapp') }}" method="POST">
                         @csrf
@@ -41,14 +41,14 @@
                         <!-- Name -->
                         <div class="mb-6">
                             <label for="name" class="block text-gray-700 font-medium mb-2">
-                                Full Name <span class="text-terra">*</span>
+                                Full Name <span class="text-soft-terra">*</span>
                             </label>
                             <input type="text"
                                    id="name"
                                    name="name"
                                    required
                                    placeholder="Enter your full name"
-                                   class="w-full px-4 py-3 border-2 border-olive/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brown focus:border-brown transition-all"
+                                   class="w-full px-4 py-3 border-2 border-tea-brown/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-soft-terra focus:border-soft-terra transition-all"
                                    value="{{ old('name') }}">
                             @error('name')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -58,14 +58,14 @@
                         <!-- Address -->
                         <div class="mb-6">
                             <label for="address" class="block text-gray-700 font-medium mb-2">
-                                Delivery Address <span class="text-terra">*</span>
+                                Delivery Address <span class="text-soft-terra">*</span>
                             </label>
                             <textarea id="address"
                                       name="address"
                                       required
                                       rows="4"
                                       placeholder="Enter your complete delivery address"
-                                      class="w-full px-4 py-3 border-2 border-olive/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brown focus:border-brown transition-all resize-none">{{ old('address') }}</textarea>
+                                      class="w-full px-4 py-3 border-2 border-tea-brown/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-soft-terra focus:border-soft-terra transition-all resize-none">{{ old('address') }}</textarea>
                             @error('address')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                             @enderror
@@ -80,7 +80,7 @@
                                       name="notes"
                                       rows="3"
                                       placeholder="Any special requests? (e.g., no nuts, gift wrapping)"
-                                      class="w-full px-4 py-3 border-2 border-olive/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brown focus:border-brown transition-all resize-none">{{ old('notes') }}</textarea>
+                                      class="w-full px-4 py-3 border-2 border-tea-brown/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-soft-terra focus:border-soft-terra transition-all resize-none">{{ old('notes') }}</textarea>
                             @error('notes')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                             @enderror
@@ -100,8 +100,8 @@
 
             <!-- Order Summary -->
             <div class="lg:col-span-1">
-                <div class="bg-white rounded-3xl shadow-soft p-6 md:p-8 sticky top-24">
-                    <h2 class="font-heading text-2xl text-olive mb-6">Order Summary</h2>
+                <div class="bg-warm-white rounded-soft shadow-card p-6 md:p-8 sticky top-24">
+                    <h2 class="font-heading text-2xl text-tea-green mb-6">Order Summary</h2>
 
                     <!-- Cart Items -->
                     <div class="space-y-4 mb-6 max-h-64 overflow-y-auto">
@@ -118,7 +118,7 @@
                             </div>
                             <div class="flex-grow">
                                 <p class="font-medium text-gray-800 text-sm">{{ $item['product']->name }}</p>
-                                <p class="text-olive text-sm">x{{ $item['quantity'] }}</p>
+                                <p class="text-tea-green text-sm">x{{ $item['quantity'] }}</p>
                             </div>
                             <p class="font-semibold text-gray-800 text-sm">
                                 Rp {{ number_format($item['subtotal'], 0, ',', '.') }}
@@ -141,8 +141,8 @@
                         </div>
                         <div class="border-t-2 border-olive/30 pt-3">
                             <div class="flex justify-between items-center">
-                                <span class="font-heading text-xl text-olive">Total</span>
-                                <span class="font-heading text-2xl text-terra">
+                                <span class="font-heading text-xl text-tea-green">Total</span>
+                                <span class="font-heading text-2xl text-soft-terra">
                                     Rp {{ number_format($total, 0, ',', '.') }}
                                 </span>
                             </div>
@@ -152,7 +152,7 @@
                     <!-- Back Button -->
                     <div class="mt-6">
                         <a href="{{ route('cart.index') }}"
-                           class="block w-full bg-cream text-olive text-center py-3 rounded-full font-medium hover:bg-gold transition-colors">
+                           class="block w-full bg-cream-milk text-tea-green text-center py-3 rounded-full font-medium hover:bg-gold transition-colors">
                             ← Back to Cart
                         </a>
                     </div>

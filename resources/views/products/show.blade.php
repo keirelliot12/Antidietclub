@@ -74,7 +74,7 @@
 
     <!-- Product Detail -->
     <main class="container mx-auto px-4 pb-12">
-        <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+        <div class="bg-warm-white rounded-soft shadow-xl overflow-hidden">
             <div class="md:flex">
                 <!-- Product Image -->
                 <div class="md:w-1/2 p-8">
@@ -219,7 +219,7 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 @foreach($relatedProducts as $related)
-                <div class="related-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="related-card bg-warm-white rounded-2xl shadow-lg overflow-hidden">
                     <!-- Product Image -->
                     <a href="{{ route('products.show', $related->slug) }}" class="block">
                         <div class="aspect-square bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
@@ -257,7 +257,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white/80 backdrop-blur-md py-8 mt-12">
+    <footer class="bg-warm-white/80 backdrop-blur-md py-8 mt-12">
         <div class="container mx-auto px-4">
             <div class="text-center">
                 <span class="text-xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">

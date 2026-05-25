@@ -9,16 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-gradient-to-br from-olive/10 via-white to-terra/10 min-h-screen font-poppins">
+<body class="bg-gradient-to-br from-tea-green/10 via-warm-white to-soft-terra/10 min-h-screen font-poppins">
 
     <!-- Navigation -->
     @include('components.navbar')
 
     <!-- Header -->
-    <div class="bg-gradient-to-r from-terra/20 to-olive/20 py-12 pt-20">
+    <div class="bg-gradient-to-r from-soft-terra/20 to-tea-green/20 py-12 pt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-5xl font-pacifico text-gray-800 mb-4">Blog</h1>
-            <p class="text-gray-600 text-lg">Tips, resep, dan inspirasi untuk hidup sehat tanpa diet ketat</p>
+            <h1 class="text-4xl md:text-5xl font-pacifico text-tea-green mb-4">Blog</h1>
+            <p class="text-soft-terra text-lg">Tips, resep, dan inspirasi untuk hidup sehat tanpa diet ketat</p>
         </div>
     </div>
 
@@ -30,14 +30,14 @@
                 @if($posts->count() > 0)
                     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                         @foreach($posts as $post)
-                            <div class="bg-white rounded-3xl shadow-warm overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <div class="bg-warm-white rounded-soft shadow-card overflow-hidden hover:shadow-xl transition-shadow duration-300">
                                 <!-- Featured Image -->
                                 @if($post->featured_image)
                                     <img src="{{ $post->featured_image }}"
                                          alt="{{ $post->title }}"
                                          class="w-full h-48 object-cover">
                                 @else
-                                    <div class="w-full h-48 bg-gradient-to-br from-terra to-olive flex items-center justify-center">
+                                    <div class="w-full h-48 bg-gradient-to-br from-soft-terra to-tea-green flex items-center justify-center">
                                         <span class="text-4xl">🌸</span>
                                     </div>
                                 @endif
@@ -47,9 +47,9 @@
                                     @if($post->category)
                                         @php
                                             $categoryColors = [
-                                                'tips-tricks' => 'bg-olive/20 text-olive',
-                                                'recipes' => 'bg-terra/20 text-terra',
-                                                'default' => 'bg-brown/20 text-brown'
+                                                'tips-tricks' => 'bg-matcha-olive/20 text-tea-green',
+                                                'recipes' => 'bg-soft-terra/20 text-soft-terra',
+                                                'default' => 'bg-tea-brown/20 text-tea-brown'
                                             ];
                                             $badgeClass = $categoryColors[$post->category->slug] ?? $categoryColors['default'];
                                         @endphp
@@ -59,24 +59,24 @@
                                     @endif
 
                                     <!-- Title -->
-                                    <h2 class="text-xl font-semibold text-gray-800 mb-2 hover:text-olive transition-colors">
+                                    <h2 class="text-xl font-semibold text-tea-green mb-2 hover:text-soft-terra transition-colors">
                                         <a href="{{ route('blog.show', $post->slug) }}">
                                             {{ $post->title }}
                                         </a>
                                     </h2>
 
                                     <!-- Excerpt -->
-                                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                                    <p class="text-soft-terra text-sm mb-4 line-clamp-3">
                                         {{ $post->excerpt }}
                                     </p>
 
                                     <!-- Date -->
                                     <div class="flex items-center justify-between">
-                                        <span class="text-gray-400 text-xs">
+                                        <span class="text-tea-brown/60 text-xs">
                                             {{ $post->published_at ? $post->published_at->format('d M Y') : 'Belum dipublikasikan' }}
                                         </span>
                                         <a href="{{ route('blog.show', $post->slug) }}"
-                                           class="text-brown hover:text-terra text-sm font-medium transition-colors">
+                                           class="text-tea-brown hover:text-soft-terra text-sm font-medium transition-colors">
                                             Baca Selengkapnya →
                                         </a>
                                     </div>
@@ -103,15 +103,15 @@
             <!-- Sidebar -->
             <div class="lg:w-1/4 space-y-8">
                 <!-- Search -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
-                    <h3 class="font-pacifico text-xl text-gray-800 mb-4">Cari Artikel</h3>
+                <div class="bg-warm-white rounded-soft shadow-card p-6">
+                    <h3 class="font-pacifico text-xl text-tea-green mb-4">Cari Artikel</h3>
                     <form action="{{ route('blog.index') }}" method="GET" class="relative">
                         <input type="text"
                                name="search"
                                value="{{ request('search') }}"
                                placeholder="Cari..."
-                               class="w-full px-4 py-3 rounded-xl border-2 border-olive/30 focus:border-brown focus:outline-none transition-colors">
-                        <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-olive">
+                               class="w-full px-4 py-3 rounded-xl border-2 border-tea-brown/30 focus:border-soft-terra focus:outline-none transition-colors">
+                        <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-tea-brown/60 hover:text-soft-terra">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
@@ -120,19 +120,19 @@
                 </div>
 
                 <!-- Categories -->
-                <div class="bg-white rounded-2xl shadow-lg p-6">
-                    <h3 class="font-pacifico text-xl text-gray-800 mb-4">Kategori</h3>
+                <div class="bg-warm-white rounded-soft shadow-card p-6">
+                    <h3 class="font-pacifico text-xl text-tea-green mb-4">Kategori</h3>
                     <ul class="space-y-2">
                         <li>
                             <a href="{{ route('blog.index') }}"
-                               class="block px-4 py-2 rounded-xl {{ !request('category') ? 'bg-olive text-white' : 'bg-gray-100 text-gray-700 hover:bg-olive/20' }} transition-colors">
+                               class="block px-4 py-2 rounded-xl {{ !request('category') ? 'bg-tea-green text-warm-white' : 'bg-cream-milk-milk text-soft-terra hover:bg-matcha-olive/20' }} transition-colors">
                                 Semua
                             </a>
                         </li>
                         @foreach($categories as $category)
                             <li>
                                 <a href="{{ route('blog.index', ['category' => $category->slug]) }}"
-                                   class="block px-4 py-2 rounded-xl {{ request('category') === $category->slug ? 'bg-olive text-white' : 'bg-gray-100 text-gray-700 hover:bg-olive/20' }} transition-colors">
+                                   class="block px-4 py-2 rounded-xl {{ request('category') === $category->slug ? 'bg-tea-green text-warm-white' : 'bg-cream-milk-milk text-soft-terra hover:bg-matcha-olive/20' }} transition-colors">
                                     {{ $category->name }}
                                 </a>
                             </li>
@@ -144,9 +144,9 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-white/80 backdrop-blur-sm mt-12 py-8">
+    <footer class="bg-warm-white/80 backdrop-blur-sm mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-600 font-pacifico text-lg">© {{ date('Y') }} Luwe & Cha-Ology. Semua hak dilindungi.</p>
+            <p class="text-soft-terra font-pacifico text-lg">© {{ date('Y') }} Luwe & Cha-Ology. Semua hak dilindungi.</p>
         </div>
     </footer>
 </body>

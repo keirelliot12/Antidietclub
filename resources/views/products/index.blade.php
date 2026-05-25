@@ -37,7 +37,7 @@
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-body bg-cream min-h-screen">
+<body class="font-body bg-cream-milk min-h-screen">
 
     <!-- Navigation -->
     @include('components.navbar')
@@ -47,7 +47,7 @@
     <!-- Page Header -->
     <section class="gradient-bg relative overflow-hidden py-16">
         <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-10 left-10 w-32 h-32 bg-white rounded-full"></div>
+            <div class="absolute top-10 left-10 w-32 h-32 bg-warm-white rounded-full"></div>
             <div class="absolute top-20 right-20 w-24 h-24 bg-gold rounded-full"></div>
             <div class="absolute bottom-10 left-1/4 w-20 h-20 bg-orange rounded-full"></div>
         </div>
@@ -69,8 +69,8 @@
                        name="search" 
                        value="{{ request('search') }}"
                        placeholder="Search for your favorite treats..."
-                       class="w-full px-6 py-4 rounded-full border-2 border-terra/30 focus:border-terra focus:ring-4 focus:ring-terra/20 outline-none text-lg bg-white shadow-soft">
-                <button type="submit" class="absolute right-2 top-2 bg-terra text-white px-6 py-2 rounded-full font-medium hover:bg-olive transition-colors">
+                       class="w-full px-6 py-4 rounded-full border-2 border-terra/30 focus:border-terra focus:ring-4 focus:ring-terra/20 outline-none text-lg bg-warm-white shadow-card">
+                <button type="submit" class="absolute right-2 top-2 bg-soft-terra text-white px-6 py-2 rounded-full font-medium hover:bg-tea-green transition-colors">
                     🔍 Search
                 </button>
             </form>
@@ -78,16 +78,16 @@
 
         <!-- Category Filters -->
         <div class="mb-12">
-            <h2 class="font-heading text-2xl text-olive mb-6 text-center">🎨 Filter by Category</h2>
+            <h2 class="font-heading text-2xl text-tea-green mb-6 text-center">🎨 Filter by Category</h2>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="{{ route('products.index') }}" 
-                   class="category-btn px-6 py-3 rounded-full font-medium shadow-softer {{ !request('category') ? 'active bg-olive text-white' : 'bg-white text-gray-700 hover:bg-terra hover:text-white' }}"
+                   class="category-btn px-6 py-3 rounded-full font-medium shadow-carder {{ !request('category') ? 'active bg-olive text-white' : 'bg-warm-white text-gray-700 hover:bg-soft-terra hover:text-white' }}"
                    style="{{ !request('category') ? '' : 'border: 2px solid #FFB6C1;' }}">
                     All Products ✨
                 </a>
                 @foreach($categories as $category)
                 <a href="{{ route('products.index', ['category' => $category->slug]) }}" 
-                   class="category-btn px-6 py-3 rounded-full font-medium shadow-softer {{ request('category') === $category->slug ? 'active' : 'bg-white text-gray-700 hover:text-white' }}"
+                   class="category-btn px-6 py-3 rounded-full font-medium shadow-carder {{ request('category') === $category->slug ? 'active' : 'bg-warm-white text-gray-700 hover:text-white' }}"
                    style="{{ request('category') === $category->slug 
                        ? 'background-color: ' . $category->color . '; color: white;' 
                        : 'background-color: ' . $category->color . '20; color: ' . $category->color . '; border: 2px solid ' . $category->color . ';' }}">
@@ -101,7 +101,7 @@
         @if($products->count() > 0)
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             @foreach($products as $product)
-            <div class="bg-white rounded-3xl shadow-soft overflow-hidden card-hover">
+            <div class="bg-warm-white rounded-soft shadow-card overflow-hidden card-hover">
                 <!-- Product Image -->
                 <a href="{{ route('products.show', $product->slug) }}" class="block">
                     <div class="h-56 bg-gradient-to-br from-terra/30 to-olive/30 flex items-center justify-center relative">
@@ -113,7 +113,7 @@
                         <span class="text-7xl">🧁</span>
                         @endif
                         @if($product->is_featured)
-                        <div class="absolute top-4 right-4 bg-gold text-olive px-3 py-1 rounded-full text-sm font-heading shadow-soft">
+                        <div class="absolute top-4 right-4 bg-gold text-tea-green px-3 py-1 rounded-full text-sm font-heading shadow-card">
                             ⭐ Featured
                         </div>
                         @endif
@@ -132,25 +132,25 @@
                     
                     <!-- Product Name -->
                     <h3 class="font-heading text-xl text-gray-800 mb-2">
-                        <a href="{{ route('products.show', $product->slug) }}" class="hover:text-terra transition-colors">
+                        <a href="{{ route('products.show', $product->slug) }}" class="hover:text-soft-terra transition-colors">
                             {{ $product->name }}
                         </a>
                     </h3>
                     
                     <!-- Price -->
-                    <p class="text-olive font-heading text-2xl mb-4">
+                    <p class="text-tea-green font-heading text-2xl mb-4">
                         Rp {{ number_format($product->price, 0, ',', '.') }}
                     </p>
 
                     <!-- Add to Cart Button -->
                     <button onclick="addToCart({{ $product->id }}, 1)"
-                            class="w-full bg-brown text-white text-center py-3 rounded-full font-medium hover:bg-olive transition-colors wiggle-animation mb-2">
+                            class="w-full bg-tea-brown text-white text-center py-3 rounded-full font-medium hover:bg-tea-green transition-colors wiggle-animation mb-2">
                         Add to Cart 🛒
                     </button>
 
                     <!-- View Detail Button -->
                     <a href="{{ route('products.show', $product->slug) }}"
-                       class="block w-full bg-cream text-olive text-center py-2 rounded-full font-medium hover:bg-gold transition-colors">
+                       class="block w-full bg-cream-milk text-tea-green text-center py-2 rounded-full font-medium hover:bg-gold transition-colors">
                         View Detail 💖
                     </a>
                 </div>
@@ -162,7 +162,7 @@
         <div class="text-center py-20">
             <div class="text-8xl mb-6">😢</div>
             <h3 class="font-heading text-3xl text-gray-600 mb-4">No Products Found</h3>
-            <p class="font-accent text-xl text-terra mb-8">
+            <p class="font-accent text-xl text-soft-terra mb-8">
                 @if(request('search'))
                 We couldn't find any products matching "{{ request('search') }}"
                 @elseif(request('category'))
@@ -172,7 +172,7 @@
                 @endif
             </p>
             <a href="{{ route('products.index') }}" 
-               class="inline-block bg-terra text-white px-8 py-4 rounded-full font-heading text-lg hover:bg-olive transition-colors shadow-soft">
+               class="inline-block bg-soft-terra text-white px-8 py-4 rounded-full font-heading text-lg hover:bg-tea-green transition-colors shadow-card">
                 View All Products ✨
             </a>
         </div>
@@ -185,17 +185,17 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
                     <h3 class="font-heading text-2xl mb-4">
-                        <span class="text-terra">Luwe</span> & Cha-Ology
+                        <span class="text-soft-terra">Luwe</span> & Cha-Ology
                     </h3>
                     <p class="font-accent text-lg">Dessert & Minuman Spesial!</p>
                 </div>
                 <div>
                     <h4 class="font-heading text-xl mb-4">Quick Links</h4>
                     <div class="space-y-2">
-                        <a href="/" class="block hover:text-terra transition-colors">Home</a>
-                        <a href="{{ route('products.index') }}" class="block hover:text-terra transition-colors">Products</a>
-                        <a href="#about" class="block hover:text-terra transition-colors">About</a>
-                        <a href="#contact" class="block hover:text-terra transition-colors">Contact</a>
+                        <a href="/" class="block hover:text-soft-terra transition-colors">Home</a>
+                        <a href="{{ route('products.index') }}" class="block hover:text-soft-terra transition-colors">Products</a>
+                        <a href="#about" class="block hover:text-soft-terra transition-colors">About</a>
+                        <a href="#contact" class="block hover:text-soft-terra transition-colors">Contact</a>
                     </div>
                 </div>
                 <div>
