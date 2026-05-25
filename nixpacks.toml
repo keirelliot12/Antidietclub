@@ -10,5 +10,5 @@ nixPkgs = ['php83', 'php83Packages.composer', 'nodejs_22', 'nginx']
 cmds = ['composer install --no-dev --optimize-autoloader', 'npm install', 'npm run build']
 
 [start]
-# Ubah host 0.0.0.0 menjadi 127.0.0.1 agar tidak tembus ke public
-cmd = 'php artisan serve --host=127.0.0.1 --port=80'
+# host=0.0.0.0 wajib! 127.0.0.1 bikin 502 karena Traefik gak bisa tembus
+cmd = 'php artisan storage:link --force && php artisan serve --host=0.0.0.0 --port=80'
