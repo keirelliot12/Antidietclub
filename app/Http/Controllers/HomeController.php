@@ -37,10 +37,10 @@ class HomeController extends Controller
             ->get();
 
         // Get settings for contact info and social media
-        $whatsappNumber = Setting::get('whatsapp_phone', '+6281332875057');
-        $contactPhone = Setting::get('contact_phone', '+62 812 3456 7890');
-        $contactAddress = Setting::get('contact_address', 'Jakarta, Indonesia');
-        $instagramUrl = Setting::get('instagram_url', '#');
+        $whatsappNumber = Setting::get('whatsapp_phone', '6287887464609');
+        $contactPhone = Setting::get('contact_phone', '6287887464609');
+        $contactAddress = Setting::get('contact_address', 'Menganti, Gresik');
+        $instagramUrl = Setting::get('instagram_url', 'https://instagram.com/madeby.fullsun');
         $tiktokUrl = Setting::get('tiktok_url', '#');
         $facebookUrl = Setting::get('facebook_url', '#');
 

@@ -187,6 +187,24 @@
     </section>
     @endif
 
+    <!-- CTA Section -->
+    <section class="py-12 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-heading text-3xl md:text-4xl text-olive mb-6">📞 Hubungi Kami</h2>
+            <div class="flex flex-wrap justify-center gap-6 mb-6">
+                <a href="https://wa.me/{{ $whatsappNumber }}" target="_blank"
+                   class="inline-flex items-center gap-2 bg-brown text-white px-8 py-4 rounded-full font-heading text-lg hover:bg-olive transition-colors shadow-warm">
+                    📱 WhatsApp Order
+                </a>
+                <a href="{{ $instagramUrl }}" target="_blank"
+                   class="inline-flex items-center gap-2 bg-terra text-white px-8 py-4 rounded-full font-heading text-lg hover:bg-olive transition-colors shadow-warm">
+                    📸 Instagram
+                </a>
+            </div>
+            <p class="text-olive text-lg font-body">📍 {{ $contactAddress }}</p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-olive text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

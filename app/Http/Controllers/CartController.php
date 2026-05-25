@@ -143,7 +143,7 @@ class CartController extends Controller
         $total = $this->cartService->getTotal();
 
         // Get WhatsApp phone from settings
-        $whatsappPhone = Setting::get('whatsapp_phone', '+6281332875057');
+        $whatsappPhone = Setting::get('whatsapp_phone', '6287887464609');
 
         // Build order message
         $message = 'Halo Luwe & Cha-Ology! 🍪' . PHP_EOL . PHP_EOL;
