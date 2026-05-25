@@ -38,18 +38,8 @@ class CartService
             ];
         }
 
-        \Log::info('Before save', [
-            'session_id' => session()->getId(),
-            'cart_before' => Session::get($this->sessionKey, []),
-        ]);
-
         Session::put($this->sessionKey, $cart);
         Session::save(); // Force save session
-
-        \Log::info('After save', [
-            'session_id' => session()->getId(),
-            'cart_after' => Session::get($this->sessionKey, []),
-        ]);
 
         return $cart;
     }

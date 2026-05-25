@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart - Anti Diet Club</title>
+    <title>Cart - Luwe & Cha-Ology</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,7 +190,7 @@
     <!-- Footer -->
     <footer class="bg-pastel-purple text-white py-8 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="font-accent">© {{ date('Y') }} Anti Diet Club. Made with 💖</p>
+            <p class="font-accent">© {{ date('Y') }} Luwe & Cha-Ology. Made with 💖</p>
         </div>
     </footer>
 

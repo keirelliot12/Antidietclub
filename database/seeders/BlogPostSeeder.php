@@ -31,7 +31,7 @@ class BlogPostSeeder extends Seeder
                 'category_id' => $categoryTips->id,
                 'featured_image' => null,
                 'excerpt' => 'Temukan cara menikmati cookies favoritmu tanpa merasa bersalah. Tips praktis untuk menyeimbangkan hasrat manis dengan gaya hidup sehat.',
-                'content' => "Siapa yang bilang tidak bisa menikmati cookies tetap hidup sehat? Di Anti Diet Club, kami percaya bahwa keseimbangan adalah kunci kebahagiaan. Berikut adalah lima cara cerdas menikmati cookies tanpa rasa bersalah.
+                'content' => "Siapa yang bilang tidak bisa menikmati dessert tetap hidup sehat? Di Luwe & Cha-Ology, kami percaya bahwa keseimbangan adalah kunci kebahagiaan. Berikut adalah lima cara cerdas menikmati dessert tanpa rasa bersalah.
 
 Pertama, pilih cookies dengan bahan berkualitas. Cookies buatan rumah seperti produk kami menggunakan bahan-bahan alami tanpa pengawet buatan. Kualitas bahan sangat mempengaruhi nutrisi dan rasa kenyang yang kamu dapatkan.
 
@@ -41,7 +41,7 @@ Ketiga, kombinasikan dengan makanan sehat. Nikmati cookies bersama dengan buah s
 
 Keempat, jadikan momen spesial. Jadikan makan cookies sebagai pengalaman istimewa, mungkin saat menghabiskan waktu berkualitas dengan teman atau keluarga. Ini akan mengurangi kecenderungan makan berlebihan dari rasa bosan atau stres.
 
-Kelima, ingat bahwa hidup tentang keseimbangan. Satu atau dua cookies tidak akan merusak pola makan sehatmu. Yang terpenting adalah pola makan secara keseluruhan, bukan satu camilan saja. Di Anti Diet Club, kami mengajakmu untuk menikmati hidup dengan bijak dan tanpa rasa bersalah.",
+Kelima, ingat bahwa hidup tentang keseimbangan. Satu atau dua dessert tidak akan merusak pola makan sehatmu. Yang terpenting adalah pola makan secara keseluruhan, bukan satu camilan saja. Di Luwe & Cha-Ology, kami mengajakmu untuk menikmati hidup dengan bijak dan tanpa rasa bersalah.",
                 'status' => 'published',
                 'published_at' => now(),
                 'is_featured' => true,
@@ -51,7 +51,7 @@ Kelima, ingat bahwa hidup tentang keseimbangan. Satu atau dua cookies tidak akan
                 'slug' => 'resep-brownies-fudgy-terbaik',
                 'category_id' => $categoryRecipes->id,
                 'featured_image' => null,
-                'excerpt' => 'Pelajari rahasia membuat brownies fudgy sempurna yang lembab dan coklat pekat. Tips dari dapur Anti Diet Club untuk hasil profesional di rumah.',
+                'excerpt' => 'Pelajari rahasia membuat brownies fudgy sempurna yang lembab dan coklat pekat. Tips dari dapur Luwe & Cha-Ology untuk hasil profesional di rumah.',
                 'content' => "Brownies fudgy adalah impian setiap pecinta cokelat. Tekstur yang lembab, padat, dan kaya rasa cokelat membuat kue ini sulit ditolak. Hari ini kami berbagi resep rahasia brownies fudgy terbaik yang bisa kamu buat di dapur sendiri.
 
 Kunci dari brownies fudgy sempurna adalah rasio bahan yang tepat. Gunakan lebih banyak mentega daripada tepung, dan pilih cokelat hitam berkualitas tinggi dengan kandungan kakao minimal 60%. Semakin tinggi kualitas cokelat, semakin intens rasanya.
@@ -62,7 +62,7 @@ Suhu oven adalah faktor kritis lainnya. Panaskan oven terlebih dahulu pada 175°
 
 Tips terakhir: biarkan brownies mendingin sepenuhnya sebelum dipotong. Ini mungkin sulit, tapi kesabaran akan terbayar dengan potongan yang rapi dan tekstur yang optimal. Simpan dalam wadah kedap udara di suhu ruangan untuk menjaga kelembapan.
 
-Di Anti Diet Club, kami percaya bahwa membuat kue sendiri adalah bentuk cinta. Selamat mencoba resep ini dan jangan lupa berbagi dengan orang tersayang!",
+Di Luwe & Cha-Ology, kami percaya bahwa membuat dessert sendiri adalah bentuk cinta. Selamat mencoba resep ini dan jangan lupa berbagi dengan orang tersayang!",
                 'status' => 'published',
                 'published_at' => now(),
                 'is_featured' => false,
@@ -73,7 +73,7 @@ Di Anti Diet Club, kami percaya bahwa membuat kue sendiri adalah bentuk cinta. S
                 'category_id' => $categoryTips->id,
                 'featured_image' => null,
                 'excerpt' => 'Panduan lengkap mengirim kue sebagai hadiah. Pastikan cookies tetap segar dan cantik saat sampai ke tangan penerima.',
-                'content' => "Mengirim cookies sebagai hadiah adalah tindakan penuh kasih yang pasti diterima dengan senyuman. Namun, memastikan cookies sampai dalam kondisi sempurna membutuhkan perencanaan yang baik. Berikut adalah tips dari Anti Diet Club untuk mengirim cookies hampers seperti seorang profesional.
+                'content' => "Mengirim cookies sebagai hadiah adalah tindakan penuh kasih yang pasti diterima dengan senyuman. Namun, memastikan cookies sampai dalam kondisi sempurna membutuhkan perencanaan yang baik. Berikut adalah tips dari Luwe & Cha-Ology untuk mengirim dessert hampers seperti seorang profesional.
 
 Pertama, pilih cookies yang tahan lama. Cookies seperti choco chip atau oatmeal raisin bertahan lebih baik dalam perjalanan dibanding cookies dengan frosting lembut. Produk kami secara khusus dirancang untuk tetap segar selama 3-5 hari dalam kemasan yang tepat.
 
@@ -85,7 +85,7 @@ Keempat, sertakan kartu ucapan personal. Tulis tangan pesan spesial dan sertakan
 
 Kelima, timing adalah segalanya. Usahakan mengirim cookies 1-2 hari sebelum tanggal diperlukan, terutama jika untuk acara spesial. Ini memberikan buffer waktu jika terjadi keterlambatan pengiriman yang tidak diinginkan.
 
-Di Anti Diet Club, kami menawarkan gift box yang sudah dikemas profesional dengan standar pengiriman terbaik. Namun, jika kamu ingin mengirim kue buatan sendiri atau produk kami secara personal, tips ini akan memastikan hadiahmu sampai dengan sempurna. Ingat, hadiah terbaik adalah hadiah yang dikirim dengan c!",
+Di Luwe & Cha-Ology, kami menawarkan gift box yang sudah dikemas profesional dengan standar pengiriman terbaik. Namun, jika kamu ingin mengirim dessert buatan sendiri atau produk kami secara personal, tips ini akan memastikan hadiahmu sampai dengan sempurna. Ingat, hadiah terbaik adalah hadiah yang dikirim dengan cinta!",
                 'status' => 'published',
                 'published_at' => now(),
                 'is_featured' => true,

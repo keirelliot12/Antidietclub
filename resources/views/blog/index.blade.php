@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Anti Diet Club</title>
+    <title>Blog - Luwe & Cha-Ology</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -170,7 +170,7 @@
     <!-- Footer -->
     <footer class="bg-white/80 backdrop-blur-sm mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-600 font-pacifico text-lg">© {{ date('Y') }} Anti Diet Club. Semua hak dilindungi.</p>
+            <p class="text-gray-600 font-pacifico text-lg">© {{ date('Y') }} Luwe & Cha-Ology. Semua hak dilindungi.</p>
         </div>
     </footer>
 </body>

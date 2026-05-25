@@ -129,7 +129,7 @@ return [
 
     'cookie' => env(
         'SESSION_COOKIE',
-        'antidietclub_session'
+        'luwecha_session'
     ),
 
     /*

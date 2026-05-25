@@ -4,7 +4,7 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <a href="{{ url('/') }}" class="font-heading text-2xl text-pastel-purple">
-                    <span class="text-pastel-pink">Anti</span> Diet Club
+                    <span class="text-pastel-pink">Luwe</span> & Cha-Ology
                 </a>
 
                 <!-- Desktop Navigation -->

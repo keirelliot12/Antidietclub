@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $post->title }} - Anti Diet Club</title>
+    <title>{{ $post->title }} - Luwe & Cha-Ology</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -95,7 +95,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
-                                <span>Anti Diet Club Team</span>
+                                <span>Luwe & Cha-Ology Team</span>
                             </div>
                             <div class="flex items-center gap-2 text-gray-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -221,7 +221,7 @@
     <!-- Footer -->
     <footer class="bg-white/80 backdrop-blur-sm mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-600 font-pacifico text-lg">© {{ date('Y') }} Anti Diet Club. Semua hak dilindungi.</p>
+            <p class="text-gray-600 font-pacifico text-lg">© {{ date('Y') }} Luwe & Cha-Ology. Semua hak dilindungi.</p>
         </div>
     </footer>
 </body>

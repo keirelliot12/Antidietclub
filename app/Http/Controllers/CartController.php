@@ -21,13 +21,6 @@ class CartController extends Controller
      */
     public function index()
     {
-        // Debug: Log session info
-        \Log::info('Cart page loaded', [
-            'session_id' => session()->getId(),
-            'cart_count' => $this->cartService->getCount(),
-            'cart_data' => $this->cartService->getCart()
-        ]);
-
         $cartItems = $this->cartService->getCartItems();
         $total = $this->cartService->getTotal();
         $isEmpty = $this->cartService->isEmpty();
@@ -50,13 +43,6 @@ class CartController extends Controller
 
         try {
             $this->cartService->addToCart($productId, $quantity);
-
-            // Debug: Log session info
-            \Log::info('Cart added', [
-                'session_id' => session()->getId(),
-                'cart_count' => $this->cartService->getCount(),
-                'cart_data' => $this->cartService->getCart()
-            ]);
 
             return response()->json([
                 'success' => true,
@@ -157,10 +143,10 @@ class CartController extends Controller
         $total = $this->cartService->getTotal();
 
         // Get WhatsApp phone from settings
-        $whatsappPhone = Setting::get('whatsapp_phone', '6281234567890');
+        $whatsappPhone = Setting::get('whatsapp_phone', '+6281332875057');
 
         // Build order message
-        $message = 'Halo Anti Diet Club! 🍪' . PHP_EOL . PHP_EOL;
+        $message = 'Halo Luwe & Cha-Ology! 🍪' . PHP_EOL . PHP_EOL;
         $message .= '📦 Order:' . PHP_EOL;
 
         foreach ($cartItems as $item) {

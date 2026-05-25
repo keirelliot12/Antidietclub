@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Anti Diet Club - Deliciously Different</title>
+    <title>Luwe & Cha-Ology - Dessert & Minuman</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,9 +110,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="font-heading text-4xl md:text-5xl text-pastel-purple mb-4">
-                    ✨ Featured Treats
+                    ✨ Signature Desserts
                 </h2>
-                <p class="font-accent text-xl text-pastel-pink">Our most loved goodies</p>
+                <p class="font-accent text-xl text-pastel-pink">Our most loved creations</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 @foreach($featuredProducts as $product)
@@ -219,9 +219,9 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
                     <h3 class="font-heading text-2xl mb-4">
-                        <span class="text-pastel-pink">Anti</span> Diet Club
+                        <span class="text-pastel-pink">Luwe</span> & Cha-Ology
                     </h3>
-                    <p class="font-accent text-lg">Life's too short for boring food!</p>
+                    <p class="font-accent text-lg">Dessert & Minuman Spesial!</p>
                 </div>
                 <div>
                     <h4 class="font-heading text-xl mb-4">Contact Us</h4>
@@ -257,7 +257,7 @@
                 </div>
             </div>
             <div class="border-t border-white/20 pt-8 text-center">
-                <p class="font-accent">© {{ date('Y') }} Anti Diet Club. Made with 💖</p>
+                <p class="font-accent">© {{ date('Y') }} Luwe & Cha-Ology. Made with 💖</p>
             </div>
         </div>
     </footer>

@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // Run custom seeders in correct order
         $this->call([
+            UserSeeder::class,
             CategorySeeder::class,
             ProductSeeder::class,
             BlogPostSeeder::class,

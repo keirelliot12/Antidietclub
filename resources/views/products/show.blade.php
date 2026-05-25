@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $product->name }} - Anti Diet Club</title>
+    <title>{{ $product->name }} - Luwe & Cha-Ology</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" nomodule=""></script>
@@ -261,10 +261,10 @@
         <div class="container mx-auto px-4">
             <div class="text-center">
                 <span class="text-xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                    Anti Diet Club
+                    Luwe & Cha-Ology
                 </span>
-                <p class="text-gray-500 mt-2">Delicious treats for every occasion</p>
-                <p class="text-gray-400 text-sm mt-4">© 2024 Anti Diet Club. All rights reserved.</p>
+                <p class="text-gray-500 mt-2">Dessert & Minuman Spesial</p>
+                <p class="text-gray-400 text-sm mt-4">© {{ date('Y') }} Luwe & Cha-Ology. All rights reserved.</p>
             </div>
         </div>
     </footer>
